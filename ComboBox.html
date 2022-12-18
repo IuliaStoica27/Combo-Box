@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Combo Box</title>
+</head>
+<style type="text/css">
+	body{
+		text-align: center;
+	}
+
+</style>
+<body>
+<h1>Choose a Country</h1>
+<select id="countries">
+	<option>Austria</option>
+	<option>Belgium</option>
+	<option>Croatia</option>
+	<option>Denmark</option>
+	<option>Estonia</option>
+	<option>France</option>
+	<option>Greece</option>
+	<option>Hungary</option>
+</select><br><br>
+<p><strong>You chose:</strong></p>
+<div id="selected-item"></div>
+<script type="text/javascript">
+	var a = document.getElementById("countries");
+   a.addEventListener("change", writeItem);
+
+   function writeItem(){
+      var div = document.getElementById('selected-item');
+      div.innerHTML = a.options[a.selectedIndex].text;
+}
+</script>
+</body>
+
+</html>
